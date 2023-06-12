@@ -49,3 +49,14 @@ To run this project, you need to have the following software installed:
 ## Customize Prompts
 
 Work in progress
+
+### Contributing
+
+Feel free to contribute any feedback or suggestions. Message me if you're getting started on your own AI-related projects too! I'd love to collaborate!
+
+### License
+
+
+Feel free to modify the content to match your project's specifics, such as project name, description, prerequisites, installation steps, usage instructions, configuration details, contribution guidelines, and license information.
+
+Remember to update the relevant sections with the actual instructions and information specific to your project. Good luck!
