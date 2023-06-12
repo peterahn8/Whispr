@@ -1,5 +1,6 @@
 # Whisper
-Whisper Practical application of GPT 3.5 and Javascript
+
+Practical application of gpt-3.5-turbo and Javascript
 
 ## Table of Contents
 
