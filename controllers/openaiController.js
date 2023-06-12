@@ -1,6 +1,8 @@
 const openai = require('../config/openaiConfig');
 
-const generateMeta = async (answer) => {
+const generateMeta = async (req, res) => {
+  const { answer } = req.body;
+
   const description = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages: [
@@ -12,30 +14,34 @@ const generateMeta = async (answer) => {
     max_tokens: 100,
   });
 
-  console.log(description.data.choices[0].message);
+  const tags = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'user',
+        content: `Generate business applications of ${answer} in 5 points, delineated by commas.`,
+      },
+    ],
+    max_tokens: 100,
+  });
 
-  // const tags = await openai.createChatCompletion({
-  //   model: 'gpt-3.5-turbo',
-  //   messages: [
-  //     {
-  //       role: 'user',
-  //       content: `Generate business applications of ${answer} in 5 points, delineated by commas.`,
-  //     },
-  //   ],
-  //   max_tokens: 100,
-  // });
-
-  // console.log(tags.data.choices[0].message);
+  res.status(200).json({
+    description: description.data.choices[0].message,
+    tags: tags.data.choices[0].message,
+  });
 };
 
-const generateImage = async (desc) => {
+const generateImage = async (req, res) => {
+
   const image = await openai.createImage({
-    prompt: desc,
+    prompt: req.body.prompt,
     n: 1,
     size: '512x512',
   });
 
-  console.log(image.data.data[0].url);
+  res.json({
+    url: image.data.data[0].url
+  })
 };
 
 module.exports = { generateMeta, generateImage };
