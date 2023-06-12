@@ -1,5 +1,5 @@
 {
-  "name": "whisper",
+  "name": "whispr",
   "version": "1.0.0",
   "description": "Practical application of GPT 3.5 and Javascript",
   "main": "app.js",
