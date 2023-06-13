@@ -80,7 +80,7 @@ To run this project, you need to have the following software installed:
 1. Create a .env file in your local repository and enter your API key, named `OPEN_AI_KEY`
 2. The contents of the .env file will look like this:
 
-![Secret](img/configureSecretKey.jpg)
+![Secret](repoImg/configureSecretKey.jpg)
 
 ### Customizing Prompts
 
