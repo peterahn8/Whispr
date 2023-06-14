@@ -2,7 +2,7 @@
   "name": "whispr",
   "version": "1.0.0",
   "description": "Practical application of GPT 3.5 and Javascript",
-  "main": "app.js",
+  "main": "src/server/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
