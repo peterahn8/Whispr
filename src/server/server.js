@@ -2,7 +2,8 @@ const express = require('express');
 // const readline = require('readline');
 
 const {
-  generateMeta,
+  generateDescription,
+  generateApplications,
   generateImage,
 } = require('../controllers/openaiController');
 
@@ -15,7 +16,8 @@ app.use(express.json());
 app.use(express.static('public'));
 
 // Routes
-app.post('/openai/meta', generateMeta);
+app.post('/openai/description', generateDescription);
+app.post('/openai/applications', generateApplications);
 app.post('/openai/image', generateImage);
 
 // const rl = readline.createInterface({
@@ -23,5 +25,5 @@ app.post('/openai/image', generateImage);
 //   output: process.stdout,
 // });
 
-// rl.question('Ask GPT about a technology: \n', generateMeta);
+// rl.question('Ask GPT about a technology: \n', generateDescription);
 // rl.question('Describe your thumbnail: \n', generateImage);
