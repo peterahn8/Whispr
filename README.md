@@ -2,9 +2,9 @@
 
 # Table of Contents
 
-- [Use Case](#use-case)
-  - [Problems](#problems-plaguing-aspiring-developers)
-  - [Overall Objectives](#overall-objectives)
+- [Overall Objectives](#overall-objectives)
+  - [Problem](#problem)
+  - [Solution](#solution)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -16,7 +16,31 @@
 - [License](#license)
 - [Q&A](#qa)
 
-## Use Case
+## Overall Objectives
+
+1. Explore the modularity of GPT when used programmatically.
+
+   - `Whispr` can make external API calls to OpenAI API and GitHub API. It can analyze large amounts of data and provide actionable insights.
+
+2. Explore methods to make prompt engineering accessible to users.
+
+   - Users should be able to customize their prompts in an accessible frontend UI.
+
+3. _Don't reinvent the wheel._
+
+   - I'm only building the backbone of this web app to handle user interaction and server requests. `gpt-3.5-turbo` does the heavy lifting by delivering novel, creative, and structured roadmaps.
+
+### Problem
+
+1. Lack of long-term planning, leading to scope creep:
+
+   - Aspiring developers spend the majority of their time practicing languages and frameworks. Project planning is usually an afterthought, after some code has already been written.
+
+2. Lack of clarity in tech stack selection:
+
+   - Aspiring developers often struggle to choose the right technologies for their projects. They need guidance on selecting appropriate programming languages, frameworks, and tools based on project requirements and industry trends.
+
+### Solution
 
 `Whispr` is a simple web app that helps aspiring developers plan their projects:
 
@@ -31,30 +55,6 @@
 4. Find open-source projects on GitHub that have already incorporated the selected technologies.
 
    - GitHub API enables `Whispr` to seek repositories based on their tags, such as `javascript` and `bootstrap`.
-
-### Problems Plaguing Aspiring Developers
-
-1. Lack of long-term planning, leading to scope creep
-
-   - Aspiring developers spend the majority of their time practicing languages and frameworks. Project planning is usually an afterthought, after some code has already been written.
-
-2. Lack of clarity in tech stack selection:
-
-   - Aspiring developers often struggle to choose the right technologies for their projects. They need guidance on selecting appropriate programming languages, frameworks, and tools based on project requirements and industry trends.
-
-### Overall Objectives
-
-1. Explore methods to make prompt engineering accessible to users.
-
-   - Users should be able to engineer their responses in an accessible frontend UI.
-
-2. Explore the modularity of GPT when used programmatically.
-
-   - `Whispr` can make external API calls to OpenAI API and GitHub API. It can analyze large amounts of data and provide actionable insights.
-
-3. _Don't reinvent the wheel._
-
-   - I'm only building the backbone of this web app to handle user interaction and server requests. `gpt-3.5-turbo` does the heavy lifting by delivering novel, creative, and structured roadmaps.
 
 ## Getting Started
 
