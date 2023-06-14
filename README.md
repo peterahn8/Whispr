@@ -3,6 +3,7 @@
 # Table of Contents
 
 - [Overall Objectives](#overall-objectives)
+- [Use Case](#use-case)
   - [Problem](#problem)
   - [Solution](#solution)
 - [Getting Started](#getting-started)
@@ -30,6 +31,10 @@
 
    - I'm only building the backbone of this web app to handle user interaction and server requests. `gpt-3.5-turbo` does the heavy lifting by delivering novel, creative, and structured roadmaps.
 
+## Use Case
+
+`Whispr` is a simple web app that helps aspiring developers plan their projects, from beginning to end.
+
 ### Problem
 
 1. Lack of long-term planning, leading to scope creep:
@@ -42,11 +47,9 @@
 
 ### Solution
 
-`Whispr` is a simple web app that helps aspiring developers plan their projects:
-
 1. Select from a list of relevant technologies, such as `HTML`, `CSS`, `Bootstrap`, `Javascript`, `Python`, `Express`, `SQL`, `MongoDB`, and so on...
 
-2. Generate project ideas that incorporate these technologies. The user selects their favorite project idea.
+2. Generate a list of project ideas that incorporate selected technologies. The user chooses their favorite project idea.
 
 3. Generate a project roadmap, based on the selected idea.
 
