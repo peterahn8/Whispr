@@ -75,7 +75,7 @@ To run this project, you need to have the following software installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone git@github.com:peterahn8/Whispr.git
    ```
 2. Install dependencies via CLI:
    ```bash
