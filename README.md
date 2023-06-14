@@ -64,13 +64,16 @@ To run this project, you need to have the following software installed:
 ### Installation
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
+      ```bash
+      git clone https://github.com/your-username/your-repository.git
+2. Install dependencies via CLI:
+      ```bash
+      npm install
 
 ### Usage
 
 1. Open your terminal emulator of choice
-2. Navigate to the local Whispr project folder
+2. Navigate to the local Whispr project folder via CLI
 3. Run `node app` or `node app.js` to make the API request
 
 ## Configuration
