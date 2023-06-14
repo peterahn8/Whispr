@@ -26,4 +26,5 @@ app.post('/openai/image', generateImage);
 // });
 
 // rl.question('Ask GPT about a technology: \n', generateDescription);
+// rl.question('Ask GPT about a technology: \n', generateApplications);
 // rl.question('Describe your thumbnail: \n', generateImage);
