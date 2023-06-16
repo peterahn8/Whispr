@@ -22,13 +22,17 @@
 
 1. :heavy_check_mark: Set up Express, middleware, and routes
 
-2. :heavy_check_mark: Make POST requests to OpenAI with createChatCompletion function (see `src/controllers/openaiControllers.js`)
+2. :heavy_check_mark: Make POST requests to OpenAI with createChatCompletion function
+   - See `src/controllers/openaiControllers.js`
+   - Check out the [OpenAI docs](https://platform.openai.com/docs/guides/gpt/chat-completions-api) for instructions on how to customize your requests
 
 3. :construction_worker: Build a simple frontend UI
 
 4. :construction_worker: Generate a structured project roadmap with the help of createChatCompletion function
 
 5. :construction_worker: Connect GitHub API to get related projects
+
+6. :construction_worker: Condense `Whispr` documentation into pages, instead of sections
 
 ## Overall Objectives
 
@@ -108,14 +112,18 @@ To run this project, you need to have the following software installed:
 
 ### Setting up the secret key
 
-1. Create a .env file in your local repository and enter your API key, named `OPEN_AI_KEY`
+1. Create a `.env` file in your local repository and enter your API key, named `OPEN_AI_KEY`
 2. The contents of the .env file will look like this:
 
 ![Secret](images/configureSecretKey.jpg)
 
 ### Customizing Prompts
 
-Work in progress...
+Don't forget to set up your secret key in a `.env` file!
+
+Basic createChatCompletion functions reside in `src/controllers/openaiControllers.js`.
+
+Check out the [OpenAI docs](https://platform.openai.com/docs/guides/gpt/chat-completions-api) for more guidance.
 
 ## Contributing
 
