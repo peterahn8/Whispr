@@ -19,22 +19,41 @@ const generateDescription = async (req, res) => {
   });
 };
 
-const generateApplications = async (req, res) => {
+const generateIdeas = async (req, res) => {
   const { answer } = req.body;
 
-  const applications = await openai.createChatCompletion({
+  const ideas = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages: [
       {
         role: 'user',
-        content: `In 150 words or fewer, generate business applications of ${answer} in 5 points.`,
+        content: `In 150 words or fewer, generate project ideas for ${answer}.`,
       },
     ],
     max_tokens: 300,
   });
 
   res.status(200).json({
-    applications: applications.data.choices[0].message,
+    ideas: ideas.data.choices[0].message,
+  });
+};
+
+const generateRoadmap = async (req, res) => {
+  const { answer } = req.body;
+
+  const roadmap = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo',
+    messages: [
+      {
+        role: 'user',
+        content: `Generate a project roadmap for ${answer} in a numbered format for each step.`,
+      },
+    ],
+    max_tokens: 500,
+  });
+
+  res.status(200).json({
+    roadmap: roadmap.data.choices[0].message,
   });
 };
 
@@ -50,4 +69,4 @@ const generateImage = async (req, res) => {
   });
 };
 
-module.exports = { generateDescription, generateApplications, generateImage };
+module.exports = { generateDescription, generateIdeas, generateRoadmap, generateImage };

@@ -3,8 +3,9 @@ const express = require('express');
 
 const {
   generateDescription,
-  generateApplications,
-  generateImage,
+  generateIdeas,
+  generateRoadmap,
+  generateImage
 } = require('../controllers/openaiController');
 
 // Express server
@@ -17,7 +18,8 @@ app.use(express.static('public'));
 
 // Routes
 app.post('/openai/description', generateDescription);
-app.post('/openai/applications', generateApplications);
+app.post('/openai/applications', generateIdeas);
+app.post('/openai/roadmap', generateRoadmap);
 app.post('/openai/image', generateImage);
 
 // const rl = readline.createInterface({
