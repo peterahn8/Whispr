@@ -2,6 +2,7 @@
 
 # Table of Contents
 
+- [To Do](#to-do)
 - [Overall Objectives](#overall-objectives)
 - [Use Case](#use-case)
   - [Problem](#problem)
@@ -16,6 +17,18 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Q&A](#qa)
+
+## To Do
+
+1. :heavy_check_mark: Set up Express, middleware, and routes
+
+2. :heavy_check_mark: Make POST requests to OpenAI with createChatCompletion function (see `src/controllers/openaiControllers.js`)
+
+3. :construction_worker: Build a simple frontend UI
+
+4. :construction_worker: Generate a structured project roadmap with the help of createChatCompletion function
+
+5. :construction_worker: Connect GitHub API to get related projects
 
 ## Overall Objectives
 
@@ -124,7 +137,7 @@ Remember to update the relevant sections with the actual instructions and inform
 
 2. "Does `Whispr` give advice on how to code?"
 
-   - No. In an effort to minimize the scope of `Whispr`, it will not teach developers how to code. It will only give actionable insight on how to integrate their tech stack in a project.
+   - No. In an effort to minimize the scope of `Whispr`, it will not teach developers how to code. It will only give insight on how to integrate their tech stack in a project, via a detailed roadmap.
 
 3. "Is this scalable? How would you cover the token cost of a user's requests to OpenAI API?"
 
