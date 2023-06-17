@@ -23,7 +23,7 @@
 1. :heavy_check_mark: Set up Express, middleware, and routes
 
 2. :heavy_check_mark: Make POST requests to OpenAI with createChatCompletion function
-   - See `src/controllers/openaiControllers.js`
+   - See `src/controllers/openaiController.js`
    - Check out the [OpenAI docs](https://platform.openai.com/docs/guides/gpt/chat-completions-api) for instructions on how to customize your requests
 
 3. :construction_worker: Build a simple frontend UI
@@ -121,7 +121,7 @@ To run this project, you need to have the following software installed:
 
 Don't forget to set up your secret key in a `.env` file!
 
-Basic createChatCompletion functions reside in `src/controllers/openaiControllers.js`.
+Basic createChatCompletion functions reside in `src/controllers/openaiController.js`.
 
 Check out the [OpenAI docs](https://platform.openai.com/docs/guides/gpt/chat-completions-api) for more guidance.
 
