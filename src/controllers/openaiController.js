@@ -1,5 +1,8 @@
 const openai = require('../config/openaiConfig');
 
+// This whole script is still in early stage, while I learn more about prompt engineering.
+// My goal is to figure out how to split prompts into smaller subtasks for GPT to consume.
+
 const generateDescription = async (req, res) => {
   const { answer } = req.body;
 
@@ -27,10 +30,10 @@ const generateIdeas = async (req, res) => {
     messages: [
       {
         role: 'user',
-        content: `In 150 words or fewer, generate project ideas for ${answer}.`,
+        content: `In 200 words or fewer, generate 3 project ideas for ${answer}.`,
       },
     ],
-    max_tokens: 300,
+    max_tokens: 400,
   });
 
   res.status(200).json({
