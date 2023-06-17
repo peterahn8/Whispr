@@ -29,6 +29,7 @@
 3. :construction_worker: Build a simple frontend UI
 
 4. :construction_worker: Generate a structured project roadmap with the help of createChatCompletion function
+   - This feature is on hold until I test [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT) further
 
 5. :construction_worker: Connect GitHub API to get related projects
 
