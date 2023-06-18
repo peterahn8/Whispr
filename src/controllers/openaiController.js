@@ -14,7 +14,7 @@ const generateDescription = async (req, res) => {
         content: `In 50 words or fewer, explain how this technology works: ${answer}`,
       },
     ],
-    max_tokens: 100,
+    max_tokens: 200,
   });
 
   res.status(200).json({
@@ -33,7 +33,7 @@ const generateIdeas = async (req, res) => {
         content: `In 200 words or fewer, generate 3 project ideas for ${answer}.`,
       },
     ],
-    max_tokens: 400,
+    max_tokens: 500,
   });
 
   res.status(200).json({
@@ -52,7 +52,7 @@ const generateRoadmap = async (req, res) => {
         content: `Generate a project roadmap for ${answer} in a numbered format for each step.`,
       },
     ],
-    max_tokens: 500,
+    max_tokens: 1000,
   });
 
   res.status(200).json({
