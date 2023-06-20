@@ -10,6 +10,11 @@ const generateDescription = async (req, res) => {
     model: 'gpt-3.5-turbo',
     messages: [
       {
+        role: 'system',
+        content:
+          'You are an assistant that helps new software and web developers plan their passion projects.',
+      },
+      {
         role: 'user',
         content: `In 50 words or fewer, explain how this technology works: ${answer}`,
       },
@@ -29,6 +34,11 @@ const generateIdeas = async (req, res) => {
     model: 'gpt-3.5-turbo',
     messages: [
       {
+        role: 'system',
+        content:
+          'You are an assistant that helps new software and web developers plan their passion projects.',
+      },
+      {
         role: 'user',
         content: `In 200 words or fewer, generate 3 project ideas for ${answer}.`,
       },
@@ -47,6 +57,11 @@ const generateRoadmap = async (req, res) => {
   const roadmap = await openai.createChatCompletion({
     model: 'gpt-3.5-turbo',
     messages: [
+      {
+        role: 'system',
+        content:
+          'You are an assistant that helps new software and web developers plan their passion projects.',
+      },
       {
         role: 'user',
         content: `Generate a project roadmap for ${answer} in a numbered format for each step.`,
@@ -72,4 +87,9 @@ const generateImage = async (req, res) => {
   });
 };
 
-module.exports = { generateDescription, generateIdeas, generateRoadmap, generateImage };
+module.exports = {
+  generateDescription,
+  generateIdeas,
+  generateRoadmap,
+  generateImage,
+};
