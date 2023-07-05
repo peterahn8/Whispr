@@ -12,7 +12,7 @@ const generateDescription = async (req, res) => {
       {
         role: 'system',
         content:
-          'You are an assistant that helps new software and web developers plan their passion projects.',
+          'You are an assistant that helps new developers plan their passion projects.',
       },
       {
         role: 'user',
@@ -36,7 +36,7 @@ const generateIdeas = async (req, res) => {
       {
         role: 'system',
         content:
-          'You are an assistant that helps new software and web developers plan their passion projects.',
+          'You are an assistant that helps new developers plan their passion projects.',
       },
       {
         role: 'user',
@@ -60,7 +60,7 @@ const generateRoadmap = async (req, res) => {
       {
         role: 'system',
         content:
-          'You are an assistant that helps new software and web developers plan their passion projects.',
+          'You are an assistant that helps new developers plan their passion projects.',
       },
       {
         role: 'user',
@@ -83,7 +83,7 @@ const generateImage = async (req, res) => {
   });
 
   res.status(200).json({
-    url: image.data.data[0].url,
+    url: image.data.data[0].url,S
   });
 };
 
