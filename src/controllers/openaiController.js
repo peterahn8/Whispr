@@ -7,7 +7,7 @@ const generateDescription = async (req, res) => {
   const { answer } = req.body;
 
   const description = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-0314',
     messages: [
       {
         role: 'system',
@@ -31,7 +31,7 @@ const generateIdeas = async (req, res) => {
   const { answer } = req.body;
 
   const ideas = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-0314',
     messages: [
       {
         role: 'system',
@@ -55,7 +55,7 @@ const generateRoadmap = async (req, res) => {
   const { answer } = req.body;
 
   const roadmap = await openai.createChatCompletion({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-0314',
     messages: [
       {
         role: 'system',
