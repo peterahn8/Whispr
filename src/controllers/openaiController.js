@@ -51,9 +51,7 @@ const generateIdeas = async (req, res) => {
   });
 };
 
-const generateRoadmap = async (req, res) => {
-  const { answer } = req.body;
-
+async function generateRoadmap(selectedTechnologies) {
   const roadmap = await openai.createChatCompletion({
     model: 'gpt-4-0314',
     messages: [
@@ -64,16 +62,16 @@ const generateRoadmap = async (req, res) => {
       },
       {
         role: 'user',
-        content: `Generate a project roadmap for ${answer} in a numbered format for each step.`,
+        content: `Generate a project roadmap that utilizes the following technologies: ${selectedTechnologies.join(
+          ', '
+        )}. Format the project roadmap with numbers for each step.`,
       },
     ],
     max_tokens: 1000,
   });
 
-  res.status(200).json({
-    roadmap: roadmap.data.choices[0].message,
-  });
-};
+  return roadmap.data.choices[0].message;
+}
 
 const generateImage = async (req, res) => {
   const image = await openai.createImage({
@@ -83,7 +81,8 @@ const generateImage = async (req, res) => {
   });
 
   res.status(200).json({
-    url: image.data.data[0].url,S
+    url: image.data.data[0].url,
+    S,
   });
 };
 
