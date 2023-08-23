@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Whispr</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="index.js" defer></script>
-  </head>
-  <body>
-    <nav>
-      <img src="../../public/img/robotHandshake.png" alt="Whispr Logo" />
-      <h1>Whispr</h1>
-    </nav>
 
-    <div class="container">
-      <form class="meta-form">
-        <h2>Generate data</h2>
-        <label for="title">
-          <span>Answer:</span>
-          <input type="text" name="title" />
-          <button>generate data</button>
-        </label>
-      </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whispr</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="index.mjs" type="module" defer></script>
+</head>
 
-      <div class="description">
-        <p>Your answer...</p>
-      </div>
-      <div class="tags">
-        <p>Your tags...</p>
-      </div>
+<body>
+  <h1>Select Technologies</h1>
+  <form id="technologyForm">
+    <label>
+      <input type="checkbox" name="technologies" value="HTML"> HTML
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" name="technologies" value="CSS"> CSS
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" name="technologies" value="JavaScript"> JavaScript
+    </label>
+    <br>
+    <button type="button" id="generateIdeasButton">Generate Project Ideas</button>
+    <button type="button" id="generateRoadmapButton">Generate Project Roadmap</button>
+  </form>
 
-      <form class="image-form">
-        <h2>Generate image</h2>
-        <label for="image">
-          <span>Describe the image:</span>
-          <input type="text" name="prompt" />
-          <button>generate image</button>
-        </label>
-      </form>
+  <div id="projectIdeas">
+    <!-- Generated project ideas will be displayed here as buttons -->
+  </div>
 
-      <div class="thumbnail">
-        <img src="https://place-hold.it/512x512" alt="thumbnail" />
-      </div>
-    </div>
-  </body>
+  <div id="projectRoadmap">
+    <!-- Generated project roadmap will be displayed here -->
+  </div>
+</body>
+
 </html>
