@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const projectIdeasDiv = document.getElementById('projectIdeas');
   const projectRoadmapDiv = document.getElementById('projectRoadmap');
 
-  let selectedProjectIdea = ''; // Store the selected project idea
+  let selectedProjectIdea = ''; // Store selected project idea
 
   generateIdeasButton.addEventListener('click', async () => {
     const selectedTechnologies = Array.from(technologyForm.elements)
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       )
       .map((checkbox) => checkbox.value);
 
-    // Make a fetch request to your server's "/openai/applications" endpoint
+    // Fetch request to "/openai/applications" endpoint
     const response = await fetch('/openai/applications', {
       method: 'POST',
       headers: {
@@ -25,13 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
       body: JSON.stringify({ selectedTechnologies }),
     });
 
-    // Extract and display the generated ideas
     const ideas = await response.text();
 
-    // Parse the response text into an array of ideas
+    // Parse the response text into an array
     const ideasArray = ideas.split('\n').filter((item) => item.trim() !== '');
 
-    // Clear the projectIdeasDiv before adding new content
+    // Clear projectIdeasDiv before adding new content
     projectIdeasDiv.innerHTML = '';
 
     // Create and add each idea as a clickable paragraph
@@ -47,10 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
           el.classList.remove('selected-idea');
         });
 
-        // Toggle the selected class for the clicked idea
+        // Toggle selected class for the clicked idea
         ideaParagraph.classList.toggle('selected-idea');
 
-        // Update the selected project idea
+        // Update selected project idea
         selectedProjectIdea = ideaParagraph.classList.contains('selected-idea')
           ? idea
           : '';
@@ -59,13 +58,13 @@ document.addEventListener('DOMContentLoaded', () => {
       projectIdeasDiv.appendChild(ideaParagraph);
     });
 
-    // Clear the selected project idea when generating new ideas
+    // Clear selected project idea when generating new ideas
     selectedProjectIdea = '';
   });
 
   generateRoadmapButton.addEventListener('click', async () => {
     if (!selectedProjectIdea) {
-      // If no project idea is selected, show a message to the user
+      // If no project idea selected, show a message
       projectRoadmapDiv.innerHTML =
         '<p>Please select a project idea first.</p>';
       return;
@@ -77,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       )
       .map((checkbox) => checkbox.value);
 
-    // Make a fetch request to your server's "/openai/roadmap" endpoint
+    // Fetch request to "/openai/roadmap" endpoint
     const response = await fetch('/openai/roadmap', {
       method: 'POST',
       headers: {
@@ -86,8 +85,15 @@ document.addEventListener('DOMContentLoaded', () => {
       body: JSON.stringify({ selectedTechnologies, selectedProjectIdea }),
     });
 
-    // Extract and display the generated roadmap
     const roadmap = await response.text();
-    projectRoadmapDiv.innerHTML = roadmap;
+
+    // Split and delineate roadmap
+    const roadmapSteps = roadmap
+      .split('\n')
+      .filter((item) => item.trim() !== '');
+    const formattedRoadmap = roadmapSteps.join('<br>');
+
+    // Display formatted roadmap
+    projectRoadmapDiv.innerHTML = formattedRoadmap;
   });
 });
