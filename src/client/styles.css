@@ -54,9 +54,48 @@ button:hover {
 }
 
 .clickable-idea:hover {
-  background-color: #dedede; /* Change to your desired hover background color */
+  background-color: #dedede; /* Clickable hover background color */
 }
 
 .selected-idea {
-  background-color: #cbcbcb; /* Change to your desired selected background color */
+  background-color: #cbcbcb; /* Selected background color */
+}
+
+/* Project ideas and roadmap containers */
+#projectIdeas,
+#projectRoadmap {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Individual project idea or roadmap item */
+.clickable-idea {
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.selected-idea {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+/* Generate buttons */
+#generateRoadmapButton {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#generateRoadmapButton:hover {
+  background-color: #0056b3;
 }
