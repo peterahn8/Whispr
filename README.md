@@ -26,10 +26,9 @@
    - See `src/controllers/openaiController.js`
    - Check out the [OpenAI docs](https://platform.openai.com/docs/guides/gpt/chat-completions-api) for instructions on how to customize your requests
 
-3. :construction_worker: Build a simple frontend UI
+3. :heavy_check_mark: Build a simple frontend UI
 
-4. :construction_worker: Generate a structured project roadmap with the help of createChatCompletion function
-   - This feature is on hold until I test [AutoGPT](https://github.com/Significant-Gravitas/Auto-GPT) further
+4. :heavy_check_mark: Generate a structured project roadmap with the help of createChatCompletion function
 
 5. :construction_worker: Connect GitHub API to get related projects
 
